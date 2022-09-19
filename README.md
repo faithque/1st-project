@@ -1,2 +1,2 @@
-# 1st-project
+# project
 A sample of weather of a certain place
