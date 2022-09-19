@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>week1</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      p {
+        margin: 0px;
+      }
+      h1 {
+        margin: 0px;
+      }
+      .cloud {
+        font-size: 50px;
+        color: royalblue;
+
+        border-color: royalblue;
+      }
+      .tokyo {
+        color: royalblue;
+        margin: 0px;
+      }
+
+      .bold {
+        font-weight: 300;
+      }
+      h3 {
+        margin: 40px 0px 10px 0px;
+      }
+      .sun {
+        color: gold;
+      }
+
+      button {
+        background-color: dodgerblue;
+        border-color: dodgerblue;
+        padding: 15px 30px;
+        border-radius: 30px;
+        color: white;
+        transition: all 2ms ease-in-out;
+        box-shadow: rgb(37 39 89 / 8%) 0px 8px 8px 0;
+      }
+
+      button:hover {
+        cursor: pointer;
+        background-color: white;
+        color: dodgerblue;
+      }
+      div {
+        list-style: none;
+        text-align: center;
+        max-width: 400px;
+        padding: 10px 0;
+        margin: 0 auto;
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+      }
+      div:hover {
+        background: #fffbef;
+      }
+      .ruth {
+        font-family: "Courier New", Courier, monospace;
+        font-weight: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <p><i class="cloud">🌥</i></p>
+    <h1 class="tokyo">Currently 21&#186; in Tokyo</h1>
+    <h1><strong class="bold">13&#186;</strong> / 23&#186;</h1>
+    <div>
+      <h3>🌧Tomorrow</h3>
+      <p>10&#186; /<strong> 22&#186;</strong></p>
+    </div>
+    <div>
+      <h3>🌥Saturday</h3>
+      <p>15&#186; /<strong> 17&#186;</strong></p>
+    </div>
+    <div>
+      <h3><strong class="sun">☀</strong>Sunday</h3>
+      <p>25&#186; /<strong> 28&#186;</strong></p>
+    </div>
+    <h4><button>Change City</button></h4>
+    <p class="ruth">Coded by Faith Ruth</p>
+    <script>
+      function weather() {
+        let city = prompt("What city do you live in?");
+        let temperature = prompt("What temperature is it?");
+        let heading = document.querySelector(".tokyo");
+        let emoji = document.querySelector(".cloud");
+
+        if (temperature >= 10) {
+          heading.innerHTML =
+            "Currrently " + temperature + "&#186;" + "C" + " in " + city;
+        } else {
+          heading.innerHTML =
+            "Currrently " + temperature + "&#186;" + "C" + " in " + city;
+        }
+        if (temperature >= 10) {
+          emoji.innerHTML = "😊";
+        } else {
+          emoji.innerHTML = "😢";
+        }
+      }
+      let changecitybutton = document.querySelector("button");
+      changecitybutton.addEventListener("click", weather);
+    </script>
+  </body>
+</html>
